@@ -67,7 +67,7 @@ func (h header) Encode(out []byte) {
 	out[17] = h.userMeta
 }
 
-// Decodes h from buf.
+// Decode decodes h from buf.
 func (h *header) Decode(buf []byte) {
 	h.klen = binary.BigEndian.Uint32(buf[0:4])
 	h.vlen = binary.BigEndian.Uint32(buf[4:8])
